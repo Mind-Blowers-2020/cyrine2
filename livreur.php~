@@ -1,0 +1,252 @@
+<?php
+
+namespace EventBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * livreur
+ *
+ * @ORM\Table(name="livreur")
+ * @ORM\Entity(repositoryClass="EventBundle\Repository\livreurRepository")
+ */
+class livreur
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nomL", type="string", length=255)
+     */
+    private $nomL;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenomL", type="string", length=255)
+     */
+    private $prenomL;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Cin", type="string", length=255, unique=true)
+     */
+    private $cin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="numTel", type="string", length=255)
+     */
+    private $numTel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="disponibilite", type="integer")
+     */
+    private $disponibilite;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nomL
+     *
+     * @param string $nomL
+     *
+     * @return livreur
+     */
+    public function setNomL($nomL)
+    {
+        $this->nomL = $nomL;
+
+        return $this;
+    }
+
+    /**
+     * Get nomL
+     *
+     * @return string
+     */
+    public function getNomL()
+    {
+        return $this->nomL;
+    }
+
+    /**
+     * Set prenomL
+     *
+     * @param string $prenomL
+     *
+     * @return livreur
+     */
+    public function setPrenomL($prenomL)
+    {
+        $this->prenomL = $prenomL;
+
+        return $this;
+    }
+
+    /**
+     * Get prenomL
+     *
+     * @return string
+     */
+    public function getPrenomL()
+    {
+        return $this->prenomL;
+    }
+
+    /**
+     * Set cin
+     *
+     * @param string $cin
+     *
+     * @return livreur
+     */
+    public function setCin($cin)
+    {
+        $this->cin = $cin;
+
+        return $this;
+    }
+
+    /**
+     * Get cin
+     *
+     * @return string
+     */
+    public function getCin()
+    {
+        return $this->cin;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return livreur
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set numTel
+     *
+     * @param string $numTel
+     *
+     * @return livreur
+     */
+    public function setNumTel($numTel)
+    {
+        $this->numTel = $numTel;
+
+        return $this;
+    }
+
+    /**
+     * Get numTel
+     *
+     * @return string
+     */
+    public function getNumTel()
+    {
+        return $this->numTel;
+    }
+
+    /**
+     * Set adresse
+     *
+     * @param string $adresse
+     *
+     * @return livreur
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    /**
+     * Get adresse
+     *
+     * @return string
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * Set disponibilite
+     *
+     * @param integer $disponibilite
+     *
+     * @return livreur
+     */
+    public function setDisponibilite($disponibilite)
+    {
+        $this->disponibilite = $disponibilite;
+
+        return $this;
+    }
+
+    /**
+     * Get disponibilite
+     *
+     * @return int
+     */
+    public function getDisponibilite()
+    {
+        return $this->disponibilite;
+    }
+}
+
